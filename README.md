@@ -134,65 +134,65 @@ Figura 1.14.
 ![imagem](https://user-images.githubusercontent.com/36665975/66570841-03032f80-eb8c-11e9-9cfc-62b6b869c918.png)
 
 Este módulo permite que o administrador execute cinco operações principais:
-**1. View the list of all patients registered:**
+**1. Veja a lista de todos os pacientes cadastrados:**
 
-  &nbsp; &nbsp; &nbsp; Admin can able to view all the patients registered. This includes the patients’ First Name, Last Name, Email ID, Contact Number and Password. (See Fig 1.15).As like in doctor module, admin can also search for a patient by their contact number in the search box.
+  &nbsp; &nbsp; &nbsp; O administrador pode visualizar todos os pacientes cadastrados. Isso inclui o nome, sobrenome, ID de e-mail, número de contato e senha dos pacientes. (Ver Fig 1.15). Assim como no módulo médico, o administrador também pode procurar um paciente pelo número de contato na caixa de pesquisa.
   
-  ![image](https://user-images.githubusercontent.com/36665975/66571179-83c22b80-eb8c-11e9-8819-008cdd2b0c2e.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66571179-83c22b80-eb8c-11e9-8819-008cdd2b0c2e.png)
   
-**2. View the list of all doctors registered:**
+**2. Veja a lista de todos os médicos cadastrados:**
 
-  &nbsp; &nbsp; &nbsp; Details of the doctors can also be viewed by the admin. This details include the Name of the doctor, Password, Email and Consultancy fees, shown in Fig 1.16. Searching for a doctor can be done by using the doctor’s Email ID in the search box.
+  &nbsp; &nbsp; &nbsp; Detalhes dos médicos também podem ser visualizados pelo administrador. Esses detalhes incluem o nome do médico, senha, e-mail e honorários de consultoria, mostrados na Figura 1.16. A procura de um médico pode ser feita usando o ID de e-mail do médico na caixa de pesquisa.
 
-![image](https://user-images.githubusercontent.com/36665975/66571329-a5bbae00-eb8c-11e9-89be-ce1a9c73e01b.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66571329-a5bbae00-eb8c-11e9-89be-ce1a9c73e01b.png)
 
-**3. View the Appointment lists:**
+**3. Veja as listas de compromissos:**
 
-  &nbsp; &nbsp; &nbsp; Admin can also able to see the entire details of the appointment that shows the appointment details of the patients with their respective doctors. This includes the First Name, Last Name, Email and Contact Number of patients, doctor’s name, Appointment Date, Time and the Consultancy Fees. (See Fig 1.17). 
+  &nbsp; &nbsp; &nbsp; O administrador também pode ver todos os detalhes da consulta que mostra os detalhes da consulta dos pacientes com seus respectivos médicos. Isso inclui nome, sobrenome, e-mail e número de contato dos pacientes, nome do médico, data da consulta, horário e honorários da consultoria. (Ver Figura 1.17).
   
-  ![image](https://user-images.githubusercontent.com/36665975/66571377-c3891300-eb8c-11e9-92d2-6755204564c7.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66571377-c3891300-eb8c-11e9-92d2-6755204564c7.png)
   
-**4. Add Doctor:**
+**4. Adicionar médico:**
 
-  &nbsp; &nbsp; &nbsp; Admin alone can add a new doctor since anyone can register as a doctor if we put this section on the home page. This form asks Doctor’s Name, Email ID, Password and his/her Consultancy Fees.(See Fig 1.18)
+  &nbsp; &nbsp; &nbsp; Somente o administrador pode adicionar um novo médico, já que qualquer pessoa pode se registrar como médico se colocarmos esta seção na página inicial. Este formulário solicita o nome do médico, ID de e-mail, senha e honorários de consultoria. (Ver Fig 1.18)
   
-  ![image](https://user-images.githubusercontent.com/36665975/66571687-55911b80-eb8d-11e9-9859-54e15d4ad8a0.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66571687-55911b80-eb8d-11e9-9859-54e15d4ad8a0.png)
   
-  After adding a new doctor, if we check the doctor’s list, we will see the details of new doctor is added to the list as shown in the Fig 1.19
+  Após adicionar um novo médico, se verificarmos a lista do médico, veremos os detalhes do novo médico adicionado à lista conforme mostrado na Figura 1.19
   
-  ![image](https://user-images.githubusercontent.com/36665975/66571496-03e89100-eb8d-11e9-954e-7e3704bd0ca3.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66571496-03e89100-eb8d-11e9-954e-7e3704bd0ca3.png)
   
-**5. View User’s feedback/Queries:**
+**5. Ver comentários/consultas do usuário:**
 
-  &nbsp; &nbsp; &nbsp; Admin is allowed to view the feedback/Query that has been given by the user in the ‘Contact’ page (Refer Fig 1.3). This includes User’s Name, Email Id, Contact Number and the message(Feedback/ Query) as shown in the Fig 1.20.
+  &nbsp; &nbsp; &nbsp; O administrador tem permissão para visualizar o feedback/consulta fornecido pelo usuário na página ‘Contato’ (consulte a Figura 1.3). Isso inclui o nome do usuário, ID de e-mail, número de contato e a mensagem (Feedback/Consulta), conforme mostrado na Figura 1.20.
   
-  ![image](https://user-images.githubusercontent.com/36665975/66571573-27134080-eb8d-11e9-8c1f-191a9f491872.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66571573-27134080-eb8d-11e9-8c1f-191a9f491872.png)
   
-  &nbsp; &nbsp; &nbsp; Taking everything into consideration, admin can able to view the details of patients and doctors, appointment details, Feedback by the user and can add a new doctor. Once everything is done, the admin can logout from his account.
+  &nbsp; &nbsp; &nbsp; Levando tudo em consideração, o administrador pode visualizar os dados dos pacientes e médicos, detalhes da consulta, feedback do usuário e adicionar um novo médico. Depois que tudo estiver feito, o administrador poderá sair de sua conta.
 
-## Updates
+## Atualizações
 
-### 1. Cancel Appointments
-	
-   &nbsp; &nbsp; &nbsp; Patients and doctors can able to delete their appointments.
+### 1. Cancelar compromissos
+
+   &nbsp; &nbsp; &nbsp; Pacientes e médicos podem excluir suas consultas.
  
-   ![image](https://user-images.githubusercontent.com/36665975/75169587-d0c72880-574e-11ea-9a9e-ba098c04e594.png)
+   ![imagem](https://user-images.githubusercontent.com/36665975/75169587-d0c72880-574e-11ea-9a9e-ba098c04e594.png)
     
-  If the patient deletes the last record (for doctor Ganesh), then a label "deleted by you" will be displayed in the column 'Current Status' and the action will change to cancel state.
+  Se o paciente excluir o último registro (para o médico Ganesh), um rótulo "excluído por você" será exibido na coluna 'Status Atual' e a ação mudará para o estado de cancelamento.
   
-  ![image](https://user-images.githubusercontent.com/36665975/75169873-47642600-574f-11ea-8ca4-420b0dfd20c3.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/75169873-47642600-574f-11ea-8ca4-420b0dfd20c3.png)
   
-  Now if we login to the doctor Ganesh's account and view his appointment details, then it will look like this:
+  Agora, se acessarmos a conta do médico Ganesh e visualizarmos os detalhes de sua consulta, ficará assim:
   
-  ![image](https://user-images.githubusercontent.com/36665975/75170076-9316cf80-574f-11ea-84ff-6a5976ce8179.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/75170076-9316cf80-574f-11ea-84ff-6a5976ce8179.png)
   
-  Similarly doctors can also delete their appointments and patients can view their updated appointment details.
+  Da mesma forma, os médicos também podem excluir suas consultas e os pacientes podem visualizar os detalhes atualizados das consultas.
   
-### 2. Remove Doctors by Admin
+### 2. Remover médicos por administrador
 
-&nbsp; &nbsp; &nbsp; Admin can also delete the doctors from the system. This let admin to have more control over the system.
+&nbsp; &nbsp; &nbsp; O administrador também pode excluir os médicos do sistema. Isso permite que o administrador tenha mais controle sobre o sistema.
 
-![image](https://user-images.githubusercontent.com/36665975/75170650-6d3dfa80-5750-11ea-8f05-455c7d704217.png)
+![imagem](https://user-images.githubusercontent.com/36665975/75170650-6d3dfa80-5750-11ea-8f05-455c7d704217.png)
   
 
 
