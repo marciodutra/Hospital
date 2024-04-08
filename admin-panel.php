@@ -2,7 +2,7 @@
 <?php 
 include('func.php');  
 include('newfunc.php');
-$con=mysqli_connect("localhost","root","","myhmsdb");
+$con=mysqli_connect("localhost","root","","myhmsd");
 
 
   $pid = $_SESSION['pid'];
@@ -80,7 +80,7 @@ if(isset($_GET['cancel']))
 
 
 function generate_bill(){
-  $con=mysqli_connect("localhost","root","","myhmsdb");
+  $con=mysqli_connect("localhost","root","","myhmsd");
   $pid = $_SESSION['pid'];
   $output='';
   $query=mysqli_query($con,"select p.pid,p.ID,p.fname,p.lname,p.doctor,p.appdate,p.apptime,p.disease,p.allergy,p.prescription,a.docFees from prestb p inner join appointmenttb a on p.ID=a.ID and p.pid = '$pid' and p.ID = '".$_GET['ID']."'");
@@ -126,8 +126,8 @@ if(isset($_GET["generate_bill"])){
 
   $content .= '
       <br/>
-      <h2 align ="center"> Global Hospitals</h2></br>
-      <h3 align ="center"> Bill</h3>
+      <h2 align ="center"> Hospital Márcio Dutra</h2></br>
+      <h3 align ="center"> Conta</h3>
       
 
   ';
@@ -140,8 +140,8 @@ if(isset($_GET["generate_bill"])){
 }
 
 function get_specs(){
-  $con=mysqli_connect("localhost","root","","myhmsdb");
-  $query=mysqli_query($con,"select username,spec from doctb");
+  $con=mysqli_connect("localhost","root","","myhmsd");
+  $query=mysqli_query($con,"select username,spec from doct");
   $docarray = array();
     while($row =mysqli_fetch_assoc($query))
     {
@@ -178,7 +178,7 @@ function get_specs(){
     
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Hospital Márcio Dutra </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -222,15 +222,15 @@ function get_specs(){
   <body style="padding-top:50px;">
   
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
+    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Bem vindo &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
   <div class="col-md-4" style="max-width:25%; margin-top: 3%">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Book Appointment</a>
-      <a class="list-group-item list-group-item-action" href="#app-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">Appointment History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescriptions</a>
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Anotação de livro</a>
+      <a class="list-group-item list-group-item-action" href="#app-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">Histórico de compromissos</a>
+      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescrições</a>
       
     </div><br>
   </div>
@@ -245,7 +245,7 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;"> Book My Appointment</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;"> Marque minha consulta</h4>
                       <script>
                         function clickDiv(id) {
                           document.querySelector(id).click();
@@ -253,7 +253,7 @@ function get_specs(){
                       </script>                      
                       <p class="links cl-effect-1">
                         <a href="#list-home" onclick="clickDiv('#list-home-list')">
-                          Book Appointment
+                        Anotação de livro
                         </a>
                       </p>
                     </div>
@@ -264,11 +264,11 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">My Appointments</h2>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Meus compromissos</h2>
                     
                       <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-pat-list')">
-                          View Appointment History
+                        <a href="#app-hist" onclick="clickDiv('#list-pat-list')">                        
+                          Ver histórico de compromissos
                         </a>
                       </p>
                     </div>
@@ -280,11 +280,11 @@ function get_specs(){
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Prescriptions</h2>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Prescrições</h2>
                     
                       <p class="cl-effect-1">
                         <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                          View Prescription List
+                        Ver lista de prescrições
                         </a>
                       </p>
                     </div>
@@ -303,13 +303,13 @@ function get_specs(){
         <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              <center><h4>Create an appointment</h4></center><br>
+              <center><h4>Crie um compromisso</h4></center><br>
               <form class="form-group" method="post" action="admin-panel.php">
                 <div class="row">
                   
                   <!-- <?php
 
-                        $con=mysqli_connect("localhost","root","","myhmsdb");
+                        $con=mysqli_connect("localhost","root","","myhmsd");
                         $query=mysqli_query($con,"select username,spec from doctb");
                         $docarray = array();
                           while($row =mysqli_fetch_assoc($query))
@@ -322,11 +322,11 @@ function get_specs(){
         
 
                     <div class="col-md-4">
-                          <label for="spec">Specialization:</label>
+                          <label for="spec">Especialização:</label>
                         </div>
                         <div class="col-md-8">
                           <select name="spec" class="form-control" id="spec">
-                              <option value="" disabled selected>Select Specialization</option>
+                              <option value="" disabled selected>Selecione Especialização</option>
                               <?php 
                               display_specs();
                               ?>
@@ -351,10 +351,10 @@ function get_specs(){
 
                   </script>
 
-              <div class="col-md-4"><label for="doctor">Doctors:</label></div>
+              <div class="col-md-4"><label for="doctor">Médicos:</label></div>
                 <div class="col-md-8">
                     <select name="doctor" class="form-control" id="doctor" required="required">
-                      <option value="" disabled selected>Select Doctor</option>
+                      <option value="" disabled selected>Selecione o médico</option>
                 
                       <?php display_docs(); ?>
                     </select>
@@ -414,21 +414,21 @@ function get_specs(){
 
                   
                   <div class="col-md-4"><label for="consultancyfees">
-                                Consultancy Fees
+                                Taxas de consulta
                               </label></div>
                               <div class="col-md-8">
                               <!-- <div id="docFees">Select a doctor</div> -->
                               <input class="form-control" type="text" name="docFees" id="docFees" readonly="readonly"/>
                   </div><br><br>
 
-                  <div class="col-md-4"><label>Appointment Date</label></div>
+                  <div class="col-md-4"><label>Data do encontro</label></div>
                   <div class="col-md-8"><input type="date" class="form-control datepicker" name="appdate"></div><br><br>
 
-                  <div class="col-md-4"><label>Appointment Time</label></div>
+                  <div class="col-md-4"><label>Hora do compromisso</label></div>
                   <div class="col-md-8">
                     <!-- <input type="time" class="form-control" name="apptime"> -->
                     <select name="apptime" class="form-control" id="apptime" required="required">
-                      <option value="" disabled selected>Select Time</option>
+                      <option value="" disabled selected>Selecione a hora</option>
                       <option value="08:00:00">8:00 AM</option>
                       <option value="10:00:00">10:00 AM</option>
                       <option value="12:00:00">12:00 PM</option>
@@ -455,18 +455,18 @@ function get_specs(){
                 <thead>
                   <tr>
                     
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Consultancy Fees</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Current Status</th>
-                    <th scope="col">Action</th>
+                  <th scope="col">Nome do médico</th>
+                    <th scope="col">Taxas de consultoria</th>
+                    <th scope="col">Data do compromisso</th>
+                    <th scope="col">Horário do compromisso</th>
+                    <th scope="col">Status Atual</th>
+                    <th scope="col">Ação</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
 
-                    $con=mysqli_connect("localhost","root","","myhmsdb");
+                    $con=mysqli_connect("localhost","root","","myhmsd");
                     global $con;
 
                     $query = "select ID,doctor,docFees,appdate,apptime,userStatus,doctorStatus from appointmenttb where fname ='$fname' and lname='$lname';";
@@ -507,7 +507,7 @@ function get_specs(){
 													
 	                        <a href="admin-panel.php?ID=<?php echo $row['ID']?>&cancel=update" 
                               onClick="return confirm('Are you sure you want to cancel this appointment ?')"
-                              title="Cancel Appointment" tooltip-placement="top" tooltip="Remove"><button class="btn btn-danger">Cancel</button></a>
+                              title="Cancel Appointment" tooltip-placement="top" tooltip="Remove"><button class="btn btn-danger">Cancelar</button></a>
 	                        <?php } else {
 
                                 echo "Cancelled";
@@ -529,20 +529,20 @@ function get_specs(){
                 <thead>
                   <tr>
                     
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Appointment ID</th>
-                    <th scope="col">Appointment Date</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Diseases</th>
-                    <th scope="col">Allergies</th>
-                    <th scope="col">Prescriptions</th>
-                    <th scope="col">Bill Payment</th>
+                  <th scope="col">Nome do médico</th>
+                    <th scope="col">ID do compromisso</th>
+                    <th scope="col">Data do compromisso</th>
+                    <th scope="col">Horário do compromisso</th>
+                    <th scope="col">Doenças</th>
+                    <th scope="col">Alergias</th>
+                    <th scope="col">Prescrições</th>
+                    <th scope="col">Pagamento de contas</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
 
-                    $con=mysqli_connect("localhost","root","","myhmsdb");
+                    $con=mysqli_connect("localhost","root","","myhmsd");
                     global $con;
 
                     $query = "select doctor,ID,appdate,apptime,disease,allergy,prescription from prestb where pid='$pid';";
@@ -592,7 +592,7 @@ function get_specs(){
       <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
         <form class="form-group" method="post" action="func.php">
-          <label>Doctors name: </label>
+          <label>Nome dos médicos: </label>
           <input type="text" name="name" placeholder="Enter doctors name" class="form-control">
           <br>
           <input type="submit" name="doc_sub" value="Add Doctor" class="btn btn-primary">
