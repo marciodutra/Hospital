@@ -1,145 +1,139 @@
-# Hospital Management System
-Hospital Management System using MySQL, Php and Bootstrap
+# Sistema de Gestão Hospitalar
+Sistema de Gestão Hospitalar utilizando MySQL, PHP e Bootstrap
 
+## Precisa trabalhar em:
 
-Video Demo : [Hospital Management System - Youtube](https://www.youtube.com/watch?v=W2XGSM5i9P8)
+1. Capacidade de aceitar a consulta do médico para reconhecer ao paciente que sua consulta foi aprovada.
+2. O usuário não deverá ser autorizado a se registrar se tentar fornecer o ID de e-mail já registrado.
+3. A senha deve ser criptografada e o campo de senha não deve ser exibido no painel de administração.
+4. Implementação de paginação para todas as visualizações de lista do aplicativo.
+5. Correção de bug - O recibo de pagamento da conta contém vários registros se o paciente tiver se associado ao mesmo médico várias vezes.
+6. Adição de mais campos na declaração de prescrição para torná-la mais específica.
+7. Adição de mais detalhes sobre o pagamento - como data do pagamento efetuado, valor pago, etc.
+8. Implementação do botão de exportação no módulo de administração para exportar todos os detalhes para uma planilha Excel.
 
-Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan0725.000webhostapp.com)
+## Pré-requisitos
+1. Instale o servidor web XAMPP
+2. Qualquer editor (de preferência VS Code ou Sublime Text)
+3. Qualquer navegador com versão mais recente
 
-## Need to work on:
+## Idiomas e tecnologias utilizadas
+1.HTML5/CSS3
+2. JavaScript (para criar conteúdo de atualização dinâmica)
+3. Bootstrap (uma biblioteca HTML, CSS e JS)
+4. XAMPP (um servidor web da Apache Friends)
+5. PHP
+6. MySQL (um RDBMS que usa SQL)
+7. TCPDF (para gerar PDFs)
 
-1. Ability to accept the appointment by the doctor to acknowledge the patient that their appointment has been approved.
-2. User should not be allowed to register if he/she tries to provide the already registered email ID.
-3. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
-4. Implementation of pagination for all the list view across the application.
-5. Bug fix - Bill payment receipt contains multiple record if the patient has associated with the same doctor multiple times.
-6. Addition of more fields in the prescription statement to make it more specific one.
-7. Addition of more details on payment - such as date of the payment made, amount paid, etc.
-8. Implementation of export button in admin module to export all details to an excel sheet.
-
-## Prerequisites
-1. Install XAMPP web server
-2. Any Editor (Preferably VS Code or Sublime Text)
-3. Any web browser with latest version
-
-## Languages and Technologies used
-1. HTML5/CSS3
-2. JavaScript (to create dynamically updating content)
-3. Bootstrap (An HTML, CSS, and JS library)
-4. XAMPP (A web server by Apache Friends)
-5. Php
-6. MySQL (An RDBMS that uses SQL)
-7. TCPDF (to generate PDFs)
-
-## Steps to run the project in your machine
-1. Download and install XAMPP in your machine
-2. Clone or download the repository
-3. Extract all the files and move it to the 'htdocs' folder of your XAMPP directory.
-4. Start the Apache and Mysql in your XAMPP control panel.
-5. Open your web browser and type 'localhost/phpmyadmin'
-6. In phpmyadmin page, create a new database from the left panel and name it as 'myhmsdb'
-7. Import the file 'myhmsdb.sql' inside your newly created database and click ok.
-8. Open a new tab and type 'localhost/foldername' in the url of your browser
-9. Hurray! That's it!
+## Passos para executar o projeto em sua máquina
+1. Baixe e instale o XAMPP em sua máquina
+2. Clone ou baixe o repositório
+3. Extraia todos os arquivos e mova-os para a pasta ‘htdocs’ do seu diretório XAMPP.
+4. Inicie o Apache e o Mysql no painel de controle do XAMPP.
+5. Abra seu navegador e digite ‘localhost/phpmyadmin’
+6. Na página phpmyadmin, crie um novo banco de dados no painel esquerdo e nomeie-o como ‘myhmsdb’
+7. Importe o arquivo 'myhmsdb.sql' dentro do seu banco de dados recém-criado e clique em ok.
+8. Abra uma nova aba e digite ‘localhost/foldername’ na URL do seu navegador
+9. Viva! É isso!
     
-### SOFTWARES USED
-  - XAMPP was installed on the Ubuntu 19.04 machine and APACHE2 Server and MySQL were initialized. And, files were built inside opt/lampp/htdocs/myhmsp
-  - Sublime Text 3.2 was used as a text editor.
-  - Google Chrome Version 77.0.3865.90 was used to run the project (localhost/myhmsp was used as the url).
+### SOFTWARES USADOS
+  - O XAMPP foi instalado na máquina Ubuntu 19.04 e o Servidor APACHE2 e MySQL foram inicializados. E os arquivos foram criados dentro de opt/lampp/htdocs/myhmsp
+  - Sublime Text 3.2 foi usado como editor de texto.
+  - Google Chrome versão 77.0.3865.90 foi usado para executar o projeto (localhost/myhmsp foi usado como url).
   
 
-### Starting Apache And MySQL in XAMPP:
-  The XAMPP Control Panel allows you to manually start and stop Apache and MySQL. To start Apache or MySQL manually, click the ‘Start’ button under ‘Actions’.
+### Iniciando Apache e MySQL no XAMPP:
+  O Painel de Controle do XAMPP permite iniciar e parar manualmente o Apache e o MySQL. Para iniciar o Apache ou MySQL manualmente, clique no botão ‘Iniciar’ em ‘Ações’.
   
   
 <p align="center"><img src="https://user-images.githubusercontent.com/36665975/59350977-fcc68900-8d3a-11e9-9450-e5c478497caa.png"></img></p>
 
-## GETTING INTO THE PROJECT:
-Hospital Management System in php and mysql. This system has a ‘Home’ page from where the patient, doctor & administrator can login into their accounts by toggling the tabs accordingly. Fig 1.1 shows the ‘Home’ page of our project.
+## ENTRAR NO PROJETO:
+Sistema de Gestão Hospitalar em php e mysql. Este sistema possui uma página inicial onde o paciente, médico e administrador podem fazer login em suas contas alternando as guias de acordo. A Fig 1.1 mostra a página ‘Home’ do nosso projeto.
 
-![image](https://user-images.githubusercontent.com/36665975/66569676-ad2d8800-eb89-11e9-94e5-ea407622a1fe.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66569676-ad2d8800-eb89-11e9-94e5-ea407622a1fe.png)
 
-'About Us' page (Fig 1.2)  allows us to get some more information about the quality and the services of the hospital.
+A página 'Sobre nós' (Fig 1.2) permite-nos obter mais informações sobre a qualidade e os serviços do hospital.
 
-![image](https://user-images.githubusercontent.com/36665975/66569816-f4b41400-eb89-11e9-9377-d9ce53ded088.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66569816-f4b41400-eb89-11e9-9377-d9ce53ded088.png)
 
-‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
+A página ‘Contato’ permite que os usuários forneçam comentários ou dúvidas sobre os serviços do hospital. A Fig 1.3 mostra a página ‘Contato’.
 
-![image](https://user-images.githubusercontent.com/36665975/66569890-157c6980-eb8a-11e9-9b2f-c0e8a6ef702e.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66569890-157c6980-eb8a-11e9-9b2f-c0e8a6ef702e.png)
 
-The ‘Home’ page consists of 3 modules:
-1. Patient Module
-2. Doctor Module
-3. Admin Module
+A página ‘Home’ consiste em 3 módulos:
+1. Módulo Paciente
+2. Módulo Médico
+3. Módulo de administração
 
-### Patient Module:
+### Módulo Paciente:
 
-  &nbsp; &nbsp; &nbsp; This module allows patients to create their account, book an appointment to see a doctor and see their appointment history.
-  The registration page(in the home page itself) asks patients to enter their First Name, Last Name, Email ID, Contact Number, Password and radio buttons to select their gender.
+  &nbsp; &nbsp; &nbsp; Este módulo permite que os pacientes criem sua conta, marquem uma consulta médica e vejam seu histórico de consultas.
+  A página de registro (na própria página inicial) pede aos pacientes que insiram seu nome, sobrenome, ID de e-mail, número de contato, senha e botões de opção para selecionar seu sexo.
   
-  ![image](https://user-images.githubusercontent.com/36665975/66570027-5b393200-eb8a-11e9-9e97-088630b5e583.png)
+  ![imagem](https://user-images.githubusercontent.com/36665975/66570027-5b393200-eb8a-11e9-9e97-088630b5e583.png)
 
-Once the patient has created his/her own account after clicking the ‘Register’ button, then he will be redirected to his/her Dashboard(Fig 1.5).
+Assim que o paciente tiver criado sua própria conta após clicar no botão ‘Cadastre-se’, ele será redirecionado para seu Painel (Fig. 1.5).
 
-![image](https://user-images.githubusercontent.com/36665975/66570123-8c196700-eb8a-11e9-845f-ea02013f1d5c.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570123-8c196700-eb8a-11e9-845f-ea02013f1d5c.png)
 
-The Dashboard page allows patients to perform two operations:
+A página Painel permite que os pacientes realizem duas operações:
 
-**1. Book his/her appointment:**
+**1. Marque sua consulta:**
 
-  &nbsp; &nbsp; &nbsp; Here, the patients can able to book their appointments to see a doctor. The appointment form(Fig 1.6) requires patients to select the doctor that they want to see, Date and Time that they want to meet with the doctor. The consultancy fee will be shown accordingly to the patient as it was already determined by the doctor.
+  &nbsp; &nbsp; &nbsp; Aqui, os pacientes podem marcar consultas médicas. O formulário de consulta (Fig. 1.6) exige que os pacientes selecionem o médico que desejam consultar, a data e a hora em que desejam se encontrar com o médico. O valor da consultoria será mostrado de acordo com o paciente, pois já foi determinado pelo médico.
 
-![image](https://user-images.githubusercontent.com/36665975/66570202-c256e680-eb8a-11e9-8839-6c7fef68ac4c.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570202-c256e680-eb8a-11e9-8839-6c7fef68ac4c.png)
 
-After clicking on the ‘Create new entry’ button, the patient will receive an alert that acknowledges the successful appointment of the patient.(See Fig 1.7) 
+Após clicar no botão ‘Criar nova entrada’, o paciente receberá um alerta que confirma o sucesso da consulta do paciente. (Ver Fig 1.7)
 
-![image](https://user-images.githubusercontent.com/36665975/66570280-ec100d80-eb8a-11e9-96c2-08e5441954d0.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570280-ec100d80-eb8a-11e9-96c2-08e5441954d0.png)
 
-**2. View patients’ Appointment History:**
+**2. Ver histórico de consultas dos pacientes:**
 
-  &nbsp; &nbsp; &nbsp; Here, the patient can see their appointment history which contains Doctor Name, Consultancy Fee, Appointment Date and Time.(See Fig 1.8).
-	
-![image](https://user-images.githubusercontent.com/36665975/66570349-0ea22680-eb8b-11e9-94fe-22a86070a274.png)
+  &nbsp; &nbsp; &nbsp; Aqui, o paciente pode ver seu histórico de consultas que contém nome do médico, taxa de consulta, data e hora da consulta (ver Fig 1.8).
 
-Once the patient has logged out of his account, if he wants to go into his account again, he can login his account, instead of register his account again. Fig 1.9 shows the login page.
-Clicking on ‘Login’ button will redirect the patient to his dashboard page which we have seen earlier (Fig 1.5)
+![imagem](https://user-images.githubusercontent.com/36665975/66570349-0ea22680-eb8b-11e9-94fe-22a86070a274.png)
 
-![image](https://user-images.githubusercontent.com/36665975/66570502-588b0c80-eb8b-11e9-88e3-5294ae896ace.png)
+Depois que o paciente tiver saído de sua conta, se quiser entrar novamente em sua conta, ele poderá fazer login em sua conta, em vez de registrá-la novamente. A Fig 1.9 mostra a página de login.
+Clicar no botão ‘Login’ redirecionará o paciente para a página do painel que vimos anteriormente (Fig 1.5)
 
-This is how the patient module works. On the whole, this module allows patients to register their account or login their account(if he/she has one), book an appointment and view his/her appointment history.
+![imagem](https://user-images.githubusercontent.com/36665975/66570502-588b0c80-eb8b-11e9-88e3-5294ae896ace.png)
 
-### Doctor Module:
+É assim que funciona o módulo do paciente. No geral, este módulo permite ao paciente cadastrar sua conta ou fazer login na sua conta (se tiver), marcar uma consulta e visualizar seu histórico de consultas.
 
-  &nbsp; &nbsp; &nbsp; The doctors can login into their account which can be done by toggling the tab from ‘Patient’ to ‘Doctor’. Fig 1.10 shows the login form for a doctor. Registration of a doctor account can be done only by admin. We will discuss more about this in Admin Module.
+### Módulo Médico:
+
+  &nbsp; &nbsp; &nbsp; Os médicos podem fazer login em sua conta, o que pode ser feito alternando a guia de ‘Paciente’ para ‘Médico’. A Fig 1.10 mostra o formulário de login de um médico. O registro de uma conta médica só pode ser feito pelo administrador. Discutiremos mais sobre isso no Módulo Admin.
   
-![image](https://user-images.githubusercontent.com/36665975/66570609-8bcd9b80-eb8b-11e9-8099-9f285aa7fe0f.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570609-8bcd9b80-eb8b-11e9-8099-9f285aa7fe0f.png)
 
-Once the doctor clicking the ‘Login’ button, they will be redirected to their own dashboard which is shown in Fig 1.11
+Assim que o médico clicar no botão ‘Login’, ele será redirecionado para seu próprio painel, mostrado na Figura 1.11
 
-![image](https://user-images.githubusercontent.com/36665975/66570642-a0119880-eb8b-11e9-8d23-be898e1bfa29.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570642-a0119880-eb8b-11e9-8d23-be898e1bfa29.png)
 
-In this page, doctor can able to see their appointments which has been booked by the patients. Fig 1.12 shows the appointment of the doctor ‘Ganesh’ which has been booked by the patient ‘Kenny Sebastian’ (Fig 1.6). This means that the doctor ‘Ganesh’ will have an appointment with the patient ‘Kenny Sebastian’ on 10-10-2019 10AM. 
+Nesta página o médico poderá ver as consultas agendadas pelos pacientes. A Fig 1.12 mostra a consulta do médico ‘Ganesh’ que foi marcada pelo paciente ‘Kenny Sebastian’ (Fig 1.6). Isso significa que o médico ‘Ganesh’ terá uma consulta com o paciente ‘Kenny Sebastian’ no dia 10/10/2019 às 10h.
 
-![image](https://user-images.githubusercontent.com/36665975/66570704-be779400-eb8b-11e9-92ae-21d8e0e4aba4.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570704-be779400-eb8b-11e9-92ae-21d8e0e4aba4.png)
 
-In real-time, the doctors will have thousands of appointments. It will be easier for a doctor to search for appointment in the case of more appointments. To make it easier, I have a ‘Search’ box in the navigation bar (See Fig 1.12) which allows doctors to search for a patient by their contact number.
-&nbsp; &nbsp; &nbsp; Once everything is done, the doctor can logout of their account. Thus, in general, a doctor can login into his/her account, view their appointments and search for a patient. This is all about Doctor Module.
+Em tempo real, os médicos terão milhares de consultas. Será mais fácil para o médico procurar consulta no caso de mais consultas. Para facilitar, tenho uma caixa de ‘Pesquisa’ na barra de navegação (ver Fig 1.12) que permite aos médicos procurar um paciente pelo seu número de contacto.
+&nbsp; &nbsp; &nbsp; Depois que tudo estiver feito, o médico poderá sair da sua conta. Assim, em geral, um médico pode acessar sua conta, visualizar suas consultas e procurar um paciente. Isso é tudo sobre o Módulo Doutor.
 
-### Admin Module:
+### Módulo de administração:
    
-   &nbsp; &nbsp; &nbsp; This module is the heart of our project where an admin can see the list of all patients. Doctors and appointments and the feedback/queries received from the ‘Contact’ page. Also admin can add doctor too. 
-  &nbsp; &nbsp; &nbsp; Login into admin account can be done by toggling into admin tab of the Home page. Fig 1.13 shows the login page for admin.
-  &nbsp; &nbsp; &nbsp; `username`: admin, `password`: admin123
+   &nbsp; &nbsp; &nbsp; Este módulo é o coração do nosso projeto, onde um administrador pode ver a lista de todos os pacientes. Médicos e consultas e comentários/dúvidas recebidos na página ‘Contato’. Além disso, o administrador também pode adicionar médico.
+  &nbsp; &nbsp; &nbsp; O login na conta de administrador pode ser feito alternando para a guia admin da página inicial. A Fig 1.13 mostra a página de login do administrador.
+  &nbsp; &nbsp; &nbsp; `nome de usuário`: admin, `senha`: admin123
 
-![image](https://user-images.githubusercontent.com/36665975/66570795-e961e800-eb8b-11e9-94e2-79940ff1d45e.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570795-e961e800-eb8b-11e9-94e2-79940ff1d45e.png)
 
-On clicking the ‘Login’ button, the admin will be redirected to his/her dashboard as shown in 
-Fig 1.14.
+Ao clicar no botão ‘Login’, o administrador será redirecionado para seu painel conforme mostrado em
+Figura 1.14.
 
-![image](https://user-images.githubusercontent.com/36665975/66570841-03032f80-eb8c-11e9-9cfc-62b6b869c918.png)
+![imagem](https://user-images.githubusercontent.com/36665975/66570841-03032f80-eb8c-11e9-9cfc-62b6b869c918.png)
 
-This module allows admin to perform five major operations:
-
+Este módulo permite que o administrador execute cinco operações principais:
 **1. View the list of all patients registered:**
 
   &nbsp; &nbsp; &nbsp; Admin can able to view all the patients registered. This includes the patients’ First Name, Last Name, Email ID, Contact Number and Password. (See Fig 1.15).As like in doctor module, admin can also search for a patient by their contact number in the search box.
